@@ -14,8 +14,8 @@ module.exports = function( babel ) {
 				const banner = options.banner;
 				const newLine = typeof options.newLine !== 'undefined' ? Boolean( options.newLine ) : true;
 
-				if ( typeof banner !== 'string' || !isComment( banner ) ) {
-					throw new TypeError( 'Banner must be a valid comment.' );
+				if ( typeof banner !== 'string' ) {
+					throw new TypeError( 'Banner must be a string.' );
 				}
 
 				if ( newLine ) {
